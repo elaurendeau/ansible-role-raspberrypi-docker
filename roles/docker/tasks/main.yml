@@ -5,7 +5,8 @@
       url: '{{ script_url }}'
       dest: '{{ script_path }}'
 - name: run script
-  script: '{{ script_path }}' 
+  become: yes
+  command: 'sh {{ script_path }}' 
 - name: remove script
   file:
       path: '{{ script_path }}' 
