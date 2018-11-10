@@ -4,6 +4,10 @@
 
 None.
 
+## Installation
+
+    ansible-galaxy install elaurendeau.ansible_role_raspberrypi_docker
+
 ## Role Variables
 
 Available variables are listed below, along with default values:
@@ -20,4 +24,4 @@ None.
     - hosts: all
       tasks:
         - import_role:
-            name: raspberrypi-docker
+            name: ansible_role_raspberrypi_docker
