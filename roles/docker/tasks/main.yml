@@ -1,0 +1,12 @@
+---
+# tasks file for docker
+- name: get docker install script
+  get_url:
+      url: '{{ script_url }}'
+      dest: '{{ script_path }}'
+- name: run script
+  script: '{{ script_path }}' 
+- name: remove script
+  file:
+      path: '{{ script_path }}' 
+      state: absent
