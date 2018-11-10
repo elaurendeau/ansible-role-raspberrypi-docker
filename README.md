@@ -24,4 +24,4 @@ None.
     - hosts: all
       tasks:
         - import_role:
-            name: ansible_role_raspberrypi_docker
+            name: elaurendeau.ansible_role_raspberrypi_docker
