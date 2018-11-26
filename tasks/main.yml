@@ -11,3 +11,17 @@
   file:
       path: '{{ script_path }}' 
       state: absent
+      
+- name: create docker group
+  become: yes
+  group:
+      name: docker
+      state: present
+- name: add ssh user to group
+  become: yes
+  user:
+      name: {{ ansible_env.SUDO_USER }}
+      groups: docker
+      append: yes
+      
+  
