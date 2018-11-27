@@ -20,8 +20,10 @@
 - name: add ssh user to group
   become: yes
   user:
-      name: "{{ ansible_env.SUDO_USER }}"
+      name: "{{ item }}"
       groups: docker
       append: yes
+  with_items: "{{ ansible_user_array }}
+  when: ansible_user_array
       
   
